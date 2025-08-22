@@ -2,81 +2,136 @@
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+	background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%); /* Lighter blue gradient */
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: #222;
+	color: #2366b8; /* Blue text for contrast */
+}
+
+.glass-card {
+	background: rgba(255, 255, 255, 0.22); /* Translucent white */
+	border-radius: 28px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	border: 1.5px solid rgba(255, 255, 255, 0.18);
+	padding: 1rem 1.2rem 1rem 1.2rem; /* Top and bottom padding are equal */
+	margin: 0 auto 1rem auto; /* Bottom margin matches button and top padding */
+	transition: box-shadow 0.2s;
+}
+
+.glass-card:hover {
+	box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
 }
 
 h1 {
-	margin-top: 2rem;
+	/* margin-top: 2rem; */
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
 	font-size: 2.2rem;
 	font-weight: 700;
-	color: #222;
+	color: #2366b8; /* Blue for header */
 	letter-spacing: 0.02em;
 	text-align: center;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 button {
-	margin: 2rem 0 1rem 0;
-	padding: 0.85rem 2.2rem;
+	margin: 0 0 1rem 0; /* margin-bottom matches card's top padding */
+	padding-top: 0.85rem;
+	padding-bottom: 0.85rem;
+	padding-left: 2.2rem;
+	padding-right: 2.2rem;
 	font-size: 1.1rem;
-	border-radius: 18px;
+	border-radius: 18px; /* Reduced from 22px */
 	border: none;
-	background: linear-gradient(90deg, #007aff 0%, #34c759 100%);
-	color: #fff;
+	background: rgba(35, 102, 184, 0.08); /* Soft blue tint, more visible */
+	color: #2366b8; /* Blue for button text */
 	font-weight: 600;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	box-shadow: 0 4px 16px rgba(31,38,135,0.10);
 	cursor: pointer;
 	transition: background 0.2s, box-shadow 0.2s;
 	font-family: inherit;
 	display: block;
-	width: 90vw;
-	max-width: 400px;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;         /* Button fills card horizontally */
+	max-width: none;
+	border: 1.5px solid rgba(35, 102, 184, 0.32); /* Subtle blue border */
+	backdrop-filter: blur(18px); /* Stronger blur */
+	-webkit-backdrop-filter: blur(18px);
 }
 
 button:active {
-	box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-	background: linear-gradient(90deg, #0051a8 0%, #28a745 100%);
+	box-shadow: 0 2px 12px rgba(31,38,135,0.18);
+	background: rgba(35, 102, 184, 0.18); /* More visible on active */
 }
 
 @media (max-width: 600px) {
 	h1 {
+		/* font-size: 1.5rem;
+		margin-top: 1.2rem; */
 		font-size: 1.5rem;
-		margin-top: 1.2rem;
+		margin-top: 0.8rem;
+		margin-bottom: 0.8rem;
 	}
 	button {
-		font-size: 1rem;
-		padding: 0.7rem 1.2rem;
+		margin: 0 0 1rem 0; /* margin-bottom matches card's top padding on mobile */
+		width: 100%;
+		max-width: none;
 		border-radius: 16px;
-		max-width: 95vw;
+		font-size: 1rem;
+		padding-top: 0.7rem;
+		padding-bottom: 0.7rem;
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+		background: rgba(35, 102, 184, 0.08);
+		border: 1.5px solid rgba(35, 102, 184, 0.32);
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
 	}
 	body {
 		padding: 0 0.5rem;
 	}
 }
- .mobile-image-container {
+.mobile-image-container {
 	width: 100%;
 	max-width: 500px;
-	margin: 0 auto 2rem auto;
+	margin: 0 auto; /* Remove bottom margin */
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
+	gap: 0; /* Remove gap between images */
 }
 
- .mobile-image-container img {
-	max-width: 100%;
+.mobile-image-container img {
+	background: rgba(255,255,255,0.22);
+	border-radius: 24px;
+	box-shadow: 0 4px 24px rgba(31,38,135,0.12);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	margin: 0; /* Remove image margin */
+	max-width: 90vw;
+	width: 100%;
 	height: auto;
-	border-radius: 20px;
-	margin: 8px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+	object-fit: contain;
+	border: 1.5px solid rgba(255,255,255,0.18);
+	transition: box-shadow 0.2s;
+}
+
+.mobile-image-container img:hover {
+	box-shadow: 0 8px 32px rgba(31,38,135,0.18);
+}
+
+.hidden {
+	display: block !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden !important;
 }

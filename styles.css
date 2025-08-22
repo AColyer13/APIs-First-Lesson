@@ -81,6 +81,10 @@ button:active {
 	body {
 		padding: 0 0.5rem;
 	}
+	.mobile-image-container {
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+	}
 }
 
 img {
@@ -100,6 +104,8 @@ img {
 	align-items: center;
 	box-sizing: border-box;
 	gap: 0;
+	padding-left: 2.2rem;
+	padding-right: 2.2rem;
 }
 
 .mobile-image-container img {

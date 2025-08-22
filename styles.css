@@ -12,13 +12,8 @@ html, body {
 }
 
 body {
-  min-height: 100svh; /* Use small viewport height for mobile browsers */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.5rem; /* Less space at top */
-  background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
-  /* ...existing code... */
+  min-height: 100svh;
+  display: block; /* Remove flexbox layout */
 }
 
 h1 {
@@ -57,12 +52,10 @@ button:active {
 .main-content {
   width: 100%;
   max-width: 600px;
-  margin: 2rem auto; /* Equal space at top and bottom */
-  padding: 2rem 1.5rem; /* Equal vertical padding */
+  margin: 2rem auto 0 auto; /* Only top margin */
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
+  display: block; /* Remove flexbox layout */
   background: rgba(255,255,255,0.45); /* Card effect */
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(31,38,135,0.10);
@@ -124,9 +117,9 @@ img {
 /* Mobile-specific styles */
 @media (max-width: 600px) {
   .main-content {
-    padding: 1.2rem 0.5rem; /* Equal vertical padding */
+    padding: 1.2rem 0.5rem;
     border-radius: 14px;
-    margin: 1rem auto; /* Equal space at top and bottom */
+    margin: 1rem auto 0 auto; /* Only top margin */
   }
   h1 {
     margin: 1rem 0 1rem 0;

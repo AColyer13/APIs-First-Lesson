@@ -2,7 +2,7 @@
 
 html, body {
 	height: 100%;
-	overflow: hidden;
+	background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
 }
 
 body {
@@ -10,11 +10,11 @@ body {
 	background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center; /* Add this to center content vertically */
+	justify-content: flex-start; /* Align content to the top */
 	color: #2366b8;
 }
 

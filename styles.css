@@ -10,12 +10,9 @@ body {
 	background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
 	margin: 0;
 	padding: 0;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start; /* Align content to the top */
 	color: #2366b8;
+	/* Remove flex properties for natural top alignment */
+	/* Remove min-height, display, flex-direction, align-items, justify-content */
 }
 
 h1 {
@@ -50,6 +47,8 @@ button {
 	max-width: 500px;
 	backdrop-filter: blur(48px);
 	-webkit-backdrop-filter: blur(48px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 button:hover,
@@ -90,6 +89,8 @@ button:active {
 	.mobile-image-container {
 		padding-left: 1.2rem;
 		padding-right: 1.2rem;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	img {
 		max-width: 100vw;
@@ -116,6 +117,8 @@ img {
 	gap: 0;
 	padding-left: 2.2rem;
 	padding-right: 2.2rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mobile-image-container img {
@@ -148,5 +151,12 @@ img {
 #multiple-dogs-button {
 	margin-top: 0.3rem;
 	margin-bottom: 0.5rem;
+}
+
+.main-content {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto; /* Center horizontally */
+	padding-top: 2.5rem; /* Add top space if needed */
 }
 

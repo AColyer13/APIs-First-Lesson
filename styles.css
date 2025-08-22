@@ -1,6 +1,7 @@
 /* Base styles */
 html, body {
   height: 100%;
+  min-height: 100svh; /* Use small viewport height for mobile browsers */
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
@@ -11,7 +12,7 @@ html, body {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100svh; /* Use small viewport height for mobile browsers */
   display: flex;
   flex-direction: column;
   align-items: center;

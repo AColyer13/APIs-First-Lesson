@@ -138,6 +138,12 @@ img {
 	/* Remove height, padding, margin, overflow rules */
 }
 
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+	filter: grayscale(0.5);
+}
+
 #single-dog-button,
 #multiple-dogs-button {
 	margin-top: 0.3rem;

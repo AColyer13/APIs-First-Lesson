@@ -62,7 +62,7 @@ button:active {
 		display: block;
 		width: 100%;
 		max-width: 100vw;
-		margin: 0.3rem auto 0.5rem auto;
+		margin: 0 0 0.5rem 0;
 		border-radius: 16px;
 		font-size: 1rem;
 		padding-top: 0.7rem;
@@ -73,7 +73,6 @@ button:active {
 		border: 1.5px solid rgba(35, 102, 184, 0.32);
 		backdrop-filter: blur(48px);
 		-webkit-backdrop-filter: blur(48px);
-		margin: 0 0 0.5rem 0; /* Remove top margin for mobile, keep bottom margin */
 	}
 	button:hover,
 	button:active {
@@ -85,6 +84,10 @@ button:active {
 	.mobile-image-container {
 		padding-left: 1.2rem;
 		padding-right: 1.2rem;
+	}
+	img {
+		max-width: 100vw;
+		max-height: 60vh;
 	}
 }
 
@@ -124,12 +127,9 @@ img {
 }
 
 .hidden {
-	display: block !important;
+	display: none !important;
 	visibility: hidden !important;
-	height: 0 !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	overflow: hidden !important;
+	/* Remove height, padding, margin, overflow rules */
 }
 
 #single-dog-button,
@@ -138,9 +138,3 @@ img {
 	margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
-	img {
-		max-width: 100vw;
-		max-height: 60vh;
-	}
-}

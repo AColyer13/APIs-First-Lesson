@@ -50,7 +50,7 @@ button:active {
 .main-content {
   width: 100%;
   max-width: 600px;
-  margin: 1.5rem auto 0 auto; /* Reduce top margin */
+  margin: 3rem auto 0 auto; /* Increased top margin */
   padding: 1.5rem 1rem; /* Reduce padding */
   box-sizing: border-box;
   display: block;
@@ -117,7 +117,7 @@ img {
   .main-content {
     padding: 1rem 0.5rem;
     border-radius: 14px;
-    margin: 0.5rem auto 0 auto; /* Reduce top margin */
+    margin: 2rem auto 0 auto; /* Increased top margin for mobile */
   }
   h1 {
     margin: 1rem 0 1rem 0;

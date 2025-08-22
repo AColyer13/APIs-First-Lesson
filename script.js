@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const response = await fetch('https://dog.ceo/api/breeds/image/random');
     const data = await response.json();
 
+    container1.classList.remove('hidden'); // Show container
     container1.innerHTML = '';
     const img1 = document.createElement('img');
     img1.src = data.message;
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const response = await fetch('https://dog.ceo/api/breeds/image/random/2');
     const data = await response.json();
 
+    container2.classList.remove('hidden'); // Show container
     container2.innerHTML = '';
     data.message.forEach((dogImage) => {
       const img2 = document.createElement('img');

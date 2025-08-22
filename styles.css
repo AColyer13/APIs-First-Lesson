@@ -6,14 +6,24 @@ html, body {
   background: linear-gradient(135deg, #e3f0ff 0%, #b6e0fe 100%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #2366b8;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling only when needed */
+}
+
+body {
+  min-height: 100vh; /* Ensure body takes at least viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-  margin: 1rem 0 2rem;
-  font-size: 2.2rem;
+  margin: 1rem 0 1.5rem; /* Reduced top margin for mobile consistency */
+  font-size: 2rem; /* Slightly smaller for better fit */
   font-weight: 700;
   letter-spacing: 0.02em;
   text-align: center;
+  line-height: 1.2; /* Ensure consistent text rendering */
 }
 
 button {
@@ -45,24 +55,27 @@ button:active {
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  flex: 1; /* Allow main-content to take available space */
 }
 
 img {
   max-width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 400px; /* Reduced to limit container height */
   object-fit: contain;
 }
 
 .mobile-image-container {
   width: 100%;
   max-width: 500px;
-  margin: 0.5rem auto 1.5rem;
+  margin: 0.5rem auto 1rem; /* Reduced bottom margin */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .mobile-image-container img {
@@ -70,7 +83,7 @@ img {
   border-radius: 24px;
   box-shadow: 0 8px 40px rgba(31, 38, 135, 0.18);
   backdrop-filter: blur(18px);
-  margin: 1rem 0;
+  margin: 0.8rem 0; /* Slightly reduced for tighter spacing */
   transition: box-shadow 0.2s;
 }
 
@@ -93,7 +106,8 @@ img {
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
-    margin: 2rem 0 1.5rem;
+    margin: 1rem 0 1rem; /* Tighter margins for mobile */
+    line-height: 1.3; /* Improve text rendering */
   }
 
   button {
@@ -103,7 +117,7 @@ img {
   }
 
   .main-content {
-    padding: 0.8rem;
+    padding: 0.5rem; /* Slightly tighter padding */
   }
 
   .mobile-image-container {
@@ -112,5 +126,6 @@ img {
 
   .mobile-image-container img {
     border-radius: 18px;
+    max-height: 300px; /* Further constrain image height on mobile */
   }
 }

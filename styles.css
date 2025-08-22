@@ -12,6 +12,8 @@ html, body {
 body {
   /* Remove min-height */
   display: block;
+  padding-top: 3rem;    /* Add extra space above the main content */
+  padding-bottom: 3rem; /* Add extra space below the main content */
 }
 
 h1 {
@@ -51,7 +53,7 @@ button:active {
   width: 100%;
   max-width: 600px;
   margin: 3rem auto 0 auto; /* Increased top margin */
-  padding: 1.5rem 1rem; /* Reduce padding */
+  padding: 1.5rem 1rem; /* Remove extra bottom padding */
   box-sizing: border-box;
   display: block;
   background: rgba(255,255,255,0.45); /* Card effect */
@@ -114,8 +116,12 @@ img {
 
 /* Mobile-specific styles */
 @media (max-width: 600px) {
+  body {
+    padding-top: 2.5rem;    /* Add extra space above the main content on mobile */
+    padding-bottom: 2.5rem; /* Add extra space below the main content on mobile */
+  }
   .main-content {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.5rem; /* Remove extra bottom padding */
     border-radius: 14px;
     margin: 2rem auto 0 auto; /* Increased top margin for mobile */
   }
